@@ -1,0 +1,372 @@
+[
+    {
+        "id": 1,
+        "name": "AI Innovation Challenge",
+        "description": "A hackathon focused on developing AI-powered solutions to societal challenges.",
+        "startDate": "2024-01-10T10:00:00Z",
+        "endDate": "2024-03-12T18:00:00Z",
+        "level": "hard",
+        "status": "past",
+        "image": "src/assets/ai-innovation.jpg",
+        "location": "San Francisco, USA",
+        "prizes": [
+            "1st Prize: $50,000",
+            "2nd Prize: $25,000",
+            "3rd Prize: $10,000"
+        ],
+        "registrationDeadline": "2024-10-01T23:59:59Z",
+        "participants": 2000,
+        "organizers": [
+            {
+                "name": "AI Global",
+                "website": "https://aiglobal.com"
+            }
+        ],
+        "sponsors": [
+            "Google",
+            "Amazon"
+        ],
+        "website": "https://aiinnovationchallenge.com",
+        "tags": [
+            "AI",
+            "Machine Learning",
+            "Deep Learning"
+        ],
+        "rules": "Teams must have 2-4 participants.",
+        "submissionRequirements": "Submit a GitHub repo with a demo video.",
+        "contactEmail": "support@aiinnovationchallenge.com"
+    },
+    {
+        "id": 2,
+        "name": "HealthTech Hackathon",
+        "description": "Creating innovative digital solutions for the healthcare industry.",
+        "startDate": "2024-08-25T08:00:00Z",
+        "endDate": "2024-09-26T20:00:00Z",
+        "level": "medium",
+        "status": "active",
+        "image": "src/assets/healthtech.jpg",
+        "location": "Online",
+        "prizes": [
+            "1st Prize: $20,000",
+            "2nd Prize: $10,000",
+            "3rd Prize: $5,000"
+        ],
+        "registrationDeadline": "2024-09-15T23:59:59Z",
+        "participants": 1500,
+        "organizers": [
+            {
+                "name": "HealthTech Innovations",
+                "website": "https://healthtech.com"
+            }
+        ],
+        "sponsors": [
+            "Pfizer",
+            "IBM"
+        ],
+        "website": "https://healthtechhackathon.com",
+        "tags": [
+            "Healthcare",
+            "Telemedicine",
+            "Blockchain"
+        ],
+        "rules": "Projects must focus on healthcare-related challenges.",
+        "submissionRequirements": "Submit a working prototype with detailed documentation.",
+        "contactEmail": "info@healthtechhackathon.com"
+    },
+    {
+        "id": 3,
+        "name": "FinTech Code Sprint",
+        "description": "A 48-hour hackathon to build next-gen financial applications.",
+        "startDate": "2024-11-05T09:00:00Z",
+        "endDate": "2024-11-07T17:00:00Z",
+        "level": "hard",
+        "status": "upcoming",
+        "image": "src/assets/fintech.jpg",
+        "location": "London, UK",
+        "prizes": [
+            "1st Prize: $30,000",
+            "2nd Prize: $15,000",
+            "3rd Prize: $7,500"
+        ],
+        "registrationDeadline": "2024-10-25T23:59:59Z",
+        "participants": 1000,
+        "organizers": [
+            {
+                "name": "FinTech World",
+                "website": "https://fintechworld.com"
+            }
+        ],
+        "sponsors": [
+            "HSBC",
+            "Stripe"
+        ],
+        "website": "https://fintechcodesprint.com",
+        "tags": [
+            "FinTech",
+            "Cryptocurrency",
+            "Blockchain"
+        ],
+        "rules": "Participants must be over 18 years of age.",
+        "submissionRequirements": "Provide a detailed business model along with the solution.",
+        "contactEmail": "contact@fintechcodesprint.com"
+    },
+    {
+        "id": 4,
+        "name": "Sustainability Hackathon",
+        "description": "Innovating sustainable solutions for a greener planet.",
+        "startDate": "2024-03-15T09:00:00Z",
+        "endDate": "2024-05-17T19:00:00Z",
+        "level": "easy",
+        "status": "past",
+        "image": "src/assets/sustain.jpg",
+        "location": "Online",
+        "prizes": [
+            "1st Prize: $15,000",
+            "2nd Prize: $7,500",
+            "3rd Prize: $5,000"
+        ],
+        "registrationDeadline": "2024-12-01T23:59:59Z",
+        "participants": 1200,
+        "organizers": [
+            {
+                "name": "EcoSolutions",
+                "website": "https://ecosolutions.com"
+            }
+        ],
+        "sponsors": [
+            "Tesla",
+            "Microsoft"
+        ],
+        "website": "https://sustainabilityhackathon.com",
+        "tags": [
+            "Sustainability",
+            "GreenTech",
+            "Renewable Energy"
+        ],
+        "rules": "Teams of 2-6 members allowed.",
+        "submissionRequirements": "Submit a demo video and codebase.",
+        "contactEmail": "support@sustainabilityhackathon.com"
+    },
+    {
+        "id": 5,
+        "name": "Women in Tech Hackathon",
+        "description": "Empowering women to lead innovation in the tech space.",
+        "startDate": "2024-09-05T08:00:00Z",
+        "endDate": "2024-11-22T18:00:00Z",
+        "level": "medium",
+        "status": "active",
+        "image": "src/assets/women.jpg",
+        "location": "Austin, Texas, USA",
+        "prizes": [
+            "1st Prize: $25,000",
+            "2nd Prize: $10,000",
+            "3rd Prize: $5,000"
+        ],
+        "registrationDeadline": "2024-11-10T23:59:59Z",
+        "participants": 800,
+        "organizers": [
+            {
+                "name": "Women in Tech",
+                "website": "https://womenintech.com"
+            }
+        ],
+        "sponsors": [
+            "Intel",
+            "Facebook"
+        ],
+        "website": "https://womenintechhackathon.com",
+        "tags": [
+            "Diversity",
+            "Women",
+            "Innovation"
+        ],
+        "rules": "Only women participants allowed.",
+        "submissionRequirements": "Include a solution demo video and presentation.",
+        "contactEmail": "info@womenintechhackathon.com"
+    },
+    {
+        "id": 6,
+        "name": "Blockchain Solutions Hackathon",
+        "description": "Develop decentralized solutions using blockchain technology.",
+        "startDate": "2024-09-30T09:00:00Z",
+        "endDate": "2024-10-01T17:00:00Z",
+        "level": "hard",
+        "status": "past",
+        "image": "src/assets/blockchain.png",
+        "location": "Berlin, Germany",
+        "prizes": [
+            "1st Prize: $40,000",
+            "2nd Prize: $20,000",
+            "3rd Prize: $10,000"
+        ],
+        "registrationDeadline": "2024-09-20T23:59:59Z",
+        "participants": 1500,
+        "organizers": [
+            {
+                "name": "Blockchain Innovators",
+                "website": "https://blockchaininnovators.com"
+            }
+        ],
+        "sponsors": [
+            "Ethereum Foundation",
+            "Binance"
+        ],
+        "website": "https://blockchainsolutionshackathon.com",
+        "tags": [
+            "Blockchain",
+            "Decentralization",
+            "Cryptocurrency"
+        ],
+        "rules": "Teams of up to 5 participants.",
+        "submissionRequirements": "Codebase with detailed README and demo video.",
+        "contactEmail": "contact@blockchainsolutionshackathon.com"
+    },
+    {
+        "id": 7,
+        "name": "EdTech Innovators Hackathon",
+        "description": "Creating digital solutions to enhance learning experiences.",
+        "startDate": "2024-11-15T09:00:00Z",
+        "endDate": "2024-11-17T17:00:00Z",
+        "level": "easy",
+        "status": "upcoming",
+        "image": "src/assets/edtechinnovation.jpg",
+        "location": "Sydney, Australia",
+        "prizes": [
+            "1st Prize: $10,000",
+            "2nd Prize: $5,000",
+            "3rd Prize: $2,500"
+        ],
+        "registrationDeadline": "2024-11-05T23:59:59Z",
+        "participants": 500,
+        "organizers": [
+            {
+                "name": "EdTech World",
+                "website": "https://edtechworld.com"
+            }
+        ],
+        "sponsors": [
+            "Google",
+            "Coursera"
+        ],
+        "website": "https://edtechinnovatorshackathon.com",
+        "tags": [
+            "Education",
+            "Technology",
+            "Learning"
+        ],
+        "rules": "Open to individuals or teams.",
+        "submissionRequirements": "Submit a working prototype with a brief description.",
+        "contactEmail": "info@edtechinnovatorshackathon.com"
+    },
+    {
+        "id": 8,
+        "name": "Gaming Hackathon",
+        "description": "Build exciting new gaming experiences and prototypes.",
+        "startDate": "2024-09-18T10:00:00Z",
+        "endDate": "2024-09-19T18:00:00Z",
+        "level": "medium",
+        "status": "active",
+        "image": "src/assets/gaming.webp",
+        "location": "Tokyo, Japan",
+        "prizes": [
+            "1st Prize: $20,000",
+            "2nd Prize: $10,000",
+            "3rd Prize: $5,000"
+        ],
+        "registrationDeadline": "2024-09-05T23:59:59Z",
+        "participants": 700,
+        "organizers": [
+            {
+                "name": "GameDev Guild",
+                "website": "https://gamedevguild.com"
+            }
+        ],
+        "sponsors": [
+            "Sony",
+            "Nintendo"
+        ],
+        "website": "https://gaminghackathon.com",
+        "tags": [
+            "Game Development",
+            "VR",
+            "AR"
+        ],
+        "rules": "Teams must submit a playable game demo.",
+        "submissionRequirements": "Provide game demo with source code.",
+        "contactEmail": "support@gaminghackathon.com"
+    },
+    {
+        "id": 9,
+        "name": "Smart City Hackathon",
+        "description": "Innovate solutions for smart cities of the future.",
+        "startDate": "2024-10-25T09:00:00Z",
+        "endDate": "2024-10-27T17:00:00Z",
+        "level": "hard",
+        "status": "upcoming",
+        "image": "src/assets/smart.jpeg",
+        "location": "New York, USA",
+        "prizes": [
+            "1st Prize: $35,000",
+            "2nd Prize: $15,000",
+            "3rd Prize: $7,500"
+        ],
+        "registrationDeadline": "2024-10-15T23:59:59Z",
+        "participants": 2000,
+        "organizers": [
+            {
+                "name": "Urban Innovators",
+                "website": "https://urbaninnovators.com"
+            }
+        ],
+        "sponsors": [
+            "Tesla",
+            "IBM"
+        ],
+        "website": "https://smartcityhackathon.com",
+        "tags": [
+            "Smart Cities",
+            "IoT",
+            "Urban Planning"
+        ],
+        "rules": "Focus on IoT and smart solutions for urban environments.",
+        "submissionRequirements": "Submit a working prototype with a video demo.",
+        "contactEmail": "contact@smartcityhackathon.com"
+    },
+    {
+        "id": 10,
+        "name": "SpaceTech Challenge",
+        "description": "Develop solutions for space exploration and technology.",
+        "startDate": "2024-12-01T09:00:00Z",
+        "endDate": "2024-12-03T18:00:00Z",
+        "level": "hard",
+        "status": "upcoming",
+        "image": "src/assets/spacetech.avif",
+        "location": "Cape Canaveral, USA",
+        "prizes": [
+            "1st Prize: $50,000",
+            "2nd Prize: $25,000",
+            "3rd Prize: $10,000"
+        ],
+        "registrationDeadline": "2024-11-20T23:59:59Z",
+        "participants": 1200,
+        "organizers": [
+            {
+                "name": "NASA",
+                "website": "https://nasa.gov"
+            }
+        ],
+        "sponsors": [
+            "SpaceX",
+            "Blue Origin"
+        ],
+        "website": "https://spacetechchallenge.com",
+        "tags": [
+            "Space Exploration",
+            "Technology",
+            "Engineering"
+        ],
+        "rules": "Teams of 3-5 participants are required.",
+        "submissionRequirements": "Submit a working model or simulation with documentation.",
+        "contactEmail": "support@spacetechchallenge.com"
+    }
+]
