@@ -7,7 +7,7 @@ const HomePage = () => {
         <div className="homepage-container">
             
             <div className="bg-image text-light d-flex align-items-center" style={{
-                backgroundImage: "url('src/assets/bg-1.avif')",
+                backgroundImage: "url('/assets/bg-1.avif')",
                 height: "70vh",
                 backgroundSize: "cover",
                 backgroundPosition: "center",

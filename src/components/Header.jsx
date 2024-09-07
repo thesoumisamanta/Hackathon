@@ -8,7 +8,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <img
-                            src="src/assets/logo.jpg"
+                            src="/assets/logo.jpg"
                             height="28"
                             alt="Logo"
                         />
