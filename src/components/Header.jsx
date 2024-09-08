@@ -26,14 +26,14 @@ const Header = () => {
                         
                         <div className="d-flex">
                             
-                            {/* <Button
+                            <Button
                                 variant="outline-dark"
                                 className="me-2"
                                 as={Link}
                                 to="/login"
                             >
                                 Login
-                            </Button> */}
+                            </Button>
                         </div>
                     </Navbar.Collapse>
                 </Container>
