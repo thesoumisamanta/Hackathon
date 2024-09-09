@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 
 const EditHackathon = ({ hackathons, setHackathons }) => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { hackathon } = location.state;
+    const { hackathon } = location.state || {};
 
-    // Local state to handle form input
-    const [name, setName] = useState(hackathon.name);
-    const [description, setDescription] = useState(hackathon.description);
-    const [startDate, setStartDate] = useState(hackathon.startDate);
-    const [endDate, setEndDate] = useState(hackathon.endDate);
-    const [level, setLevel] = useState(hackathon.level);
+    const [name, setName] = useState(hackathon?.name || '');
+    const [description, setDescription] = useState(hackathon?.description || '');
+    const [startDate, setStartDate] = useState(hackathon?.startDate || '');
+    const [endDate, setEndDate] = useState(hackathon?.endDate || '');
+    const [level, setLevel] = useState(hackathon?.level || '');
+
+    useEffect(() => {
+        if (hackathon) {
+            setName(hackathon.name);
+            setDescription(hackathon.description);
+            setStartDate(hackathon.startDate);
+            setEndDate(hackathon.endDate);
+            setLevel(hackathon.level);
+        }
+    }, [hackathon]);
 
     const handleSave = () => {
+        if (!name || !description || !startDate || !endDate || !level) {
+            alert('All fields are required.');
+            return;
+        }
+
         // Update the specific hackathon in the global state
         const updatedHackathons = hackathons.map(h =>
             h.id === hackathon.id

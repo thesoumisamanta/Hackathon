@@ -1,11 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Container, Button, Row, Col, ListGroup } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HackathonDetails = () => {
-    const [hackathons, setHackathons] = useState([]);
-    const [filteredHackathons, setFilteredHackathons] = useState([]);
+    const { id } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
     const { hackathon } = location.state || {};
@@ -14,31 +12,18 @@ const HackathonDetails = () => {
         return <div>No hackathon data found.</div>;
     }
 
-    
-
-    useEffect(() => {
-        // Filter and sort hackathons
-        let filtered = hackathons;
-    });
-
-    const handleEdit = (hackathon) => {
-        navigate(`/edit-hackathon/${hackathon.id}`, { state: { hackathon } });
+    const handleEdit = () => {
+        // Navigate to the EditHackathon page with the hackathon data in state
+        navigate('/edit-hackathon', { state: { hackathon } });
     };
-
-    
 
     const handleDelete = (id) => {
         if (window.confirm("Are you sure you want to delete this hackathon?")) {
-            const updatedHackathons = hackathons.filter(hackathon => hackathon.id !== id);
-            setHackathons(updatedHackathons);
-            setFilteredHackathons(updatedHackathons);
-
-            // After deletion, navigate to the Organizers page
-            navigate('/organizers');  // Assuming '/organizers' is the route for the Organizers page
+            // Perform delete operation here
+            navigate('/organizers');
         }
     };
 
-    
     return (
         <Container className="mt-5 text-center">
             <Row className="justify-content-center">
@@ -51,8 +36,7 @@ const HackathonDetails = () => {
                     <p><strong>Location:</strong> {hackathon.location}</p>
                     <p><strong>Registration Deadline:</strong> {new Date(hackathon.registrationDeadline).toLocaleDateString()}</p>
                     <p><strong>Participants:</strong> {hackathon.participants}</p>
-                    <p><strong>Website:</strong> <a href={hackathon.website} target="_blank"
-                        rel="noopener noreferrer">{hackathon.website}</a></p>
+                    <p><strong>Website:</strong> <a href={hackathon.website} target="_blank" rel="noopener noreferrer">{hackathon.website}</a></p>
                     <p><strong>Contact Email:</strong> <a href={`mailto:${hackathon.contactEmail}`}>{hackathon.contactEmail}</a></p>
 
                     <h4>Prizes</h4>
@@ -87,8 +71,7 @@ const HackathonDetails = () => {
                     <h4>Submission Requirements</h4>
                     <p>{hackathon.submissionRequirements}</p>
 
-                    
-                    <Button variant="secondary" className="me-2 mb-4" onClick={() => handleEdit(hackathon)}>
+                    <Button variant="primary" className="me-2 mb-4" onClick={handleEdit}>
                         Edit
                     </Button>
                     <Button className="mb-4" variant="danger" onClick={() => handleDelete(hackathon.id)}>
@@ -101,21 +84,3 @@ const HackathonDetails = () => {
 };
 
 export default HackathonDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

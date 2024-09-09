@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Button, Form} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const OrganizersPage = () => {
+const UserPage = () => {
     const [hackathons, setHackathons] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredHackathons, setFilteredHackathons] = useState([]);
-    const [sortOrder, setSortOrder] = useState('All'); // Default sorting to 'All'
-    const [filterLevel, setFilterLevel] = useState(''); // Filter by level
-    const [filterStatus, setFilterStatus] = useState(''); // Filter by status
+    const [sortOrder, setSortOrder] = useState('All');
+    const [filterLevel, setFilterLevel] = useState('');
+    const [filterStatus, setFilterStatus] = useState('');
     const navigate = useNavigate();
-
-    
 
     useEffect(() => {
         fetch('/hackathons.json')
@@ -26,26 +24,18 @@ const OrganizersPage = () => {
     }, []);
 
     useEffect(() => {
-        // Filter and sort hackathons
         let filtered = hackathons;
 
-        
-        // window.scrollTo(0, 0);  // This will scroll to the top when the component is mounted
-       
-
-        // Filter by search query
         if (searchQuery) {
             filtered = filtered.filter(hackathon =>
                 hackathon.name.toLowerCase().includes(searchQuery.toLowerCase())
             );
         }
 
-        // Filter by level
         if (filterLevel) {
             filtered = filtered.filter(hackathon => hackathon.level === filterLevel);
         }
 
-        // Filter by status (active, upcoming, past)
         if (filterStatus) {
             const currentDate = new Date();
             if (filterStatus === 'active') {
@@ -59,7 +49,6 @@ const OrganizersPage = () => {
             }
         }
 
-        // Sort hackathons by date (newest first/oldest first) only if sortOrder is not 'All'
         if (sortOrder === 'oldest') {
             filtered.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
         } else if (sortOrder === 'newest') {
@@ -77,31 +66,26 @@ const OrganizersPage = () => {
         navigate('/details', { state: { hackathon } });
     };
 
-    const handleJoinClick = () => {
+    const handleJoinClick = (hackathon) => {
         navigate('/register', { state: { hackathon } });
     };
-
 
     const renderTimer = (hackathon) => {
         const currentDate = new Date();
         if (new Date(hackathon.startDate) > currentDate) {
-            // Upcoming hackathon
             const timeUntilStart = moment(hackathon.startDate).fromNow();
             return <Card.Text>Starts {timeUntilStart}</Card.Text>;
         } else if (new Date(hackathon.endDate) > currentDate) {
-            // Active hackathon
             const timeUntilEnd = moment(hackathon.endDate).fromNow();
             return <Card.Text>Ends {timeUntilEnd}</Card.Text>;
         } else {
-            // Past hackathon
             return <Card.Text className="text-muted">Ended</Card.Text>;
         }
     };
 
-
     return (
         <div>
-            <h1 className='text-center mt-5 mb-5'>Manage Your Hackathons</h1>
+            <h1 className='text-center mt-5 mb-5'>Top Hackathons for You</h1>
             <Container className="mt-5 text-center mb-5">
                 <Row>
                     <Col md={8} className="mx-auto">
@@ -113,10 +97,7 @@ const OrganizersPage = () => {
                                 value={searchQuery}
                                 onChange={handleSearchChange}
                             />
-                            <Button variant="primary">
-                                Search
-                            </Button>
-                            
+                            <Button variant="primary">Search</Button>
                         </Form>
                         <div className="d-flex justify-content-between mb-3">
                             <Form.Select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder} className="me-2">
@@ -136,24 +117,7 @@ const OrganizersPage = () => {
                                 <option value="upcoming">Upcoming</option>
                                 <option value="past">Past</option>
                             </Form.Select>
-                            <Button
-                                variant="primary"
-                                style={{
-                                    height: 'calc(1.5em + .75rem + 2px)', 
-                                    padding: '0.375rem 1.75rem',        
-                                    borderRadius: '0.25rem',              
-                                    border: '1px solid #ced4da',                        
-                                    fontSize: '1rem',                     // Matching font size
-                                    lineHeight: '1.5',
-                                    whiteSpace: 'nowrap',                 // Prevent text from wrapping
-                                    width: '14rem'                        // Increase width as needed
-                                }}
-                                as={Link}
-                                to="/hackathonForm"
-                            >
-                                + Create hackathon
-                            </Button>
-
+                            {/* No create button for users */}
                         </div>
                     </Col>
                 </Row>
@@ -190,7 +154,7 @@ const OrganizersPage = () => {
                                 </Card.Text>
                                 {renderTimer(hackathon)}
                                 <Button variant="primary" className="me-2 rounded-xl" onClick={() => handleViewDetails(hackathon)}>View Details</Button>
-                                {/* <Button className="mb-3" variant="success" onClick={handleJoinClick}>Join Hackathon</Button> */}
+                                {/* <Button variant="success" className="mb-3" onClick={() => handleJoinClick(hackathon)}>Join Hackathon</Button> */}
                             </Card.Body>
                         </Col>
                     </Card>
@@ -200,4 +164,4 @@ const OrganizersPage = () => {
     );
 };
 
-export default OrganizersPage;
+export default UserPage;
